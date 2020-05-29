@@ -1,5 +1,5 @@
 function map(text) {
-  return text.replace(/[^a-zA-Zа-яА-Я ]/gi, '').split(' ').filter(Boolean).map(word => [word, 1]);
+  return text.toLowerCase().replace(/[^a-zа-я ]/gi, '').split(' ').filter(Boolean).map(word => [word, 1]);
 }
 
 function sort(mapped) {
