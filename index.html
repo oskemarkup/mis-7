@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>MapReduce</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+</head>
+<body>
+
+<nav class="navbar navbar-dark bg-dark">
+    <a class="navbar-brand">MapReduce</a>
+</nav>
+
+<div class="container my-3">
+    <div class="row">
+        <div class="col-sm-6">
+            <p class="h3">Ввод</p>
+            <div class="row">
+                <div class="col-sm-9">
+                    <form method="POST" id="form">
+                        <div class="form-group">
+                            <label for="text">Текст</label>
+                            <textarea class="form-control" id="text" name="text" rows="6" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Обработать</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+        <div class="col-sm-6">
+            <p class="h3">Вывод</p>
+            <div class="alert alert-info" role="alert" id="alert">
+                Здесь появятся данные после ввода текста
+            </div>
+            <ul class="list-group" id="list">
+            </ul>
+        </div>
+    </div>
+</div>
+
+<template id="item">
+    <li class="list-group-item d-flex justify-content-between align-items-center">
+        <span class="word"></span>
+        <span class="badge badge-primary badge-pill"></span>
+    </li>
+</template>
+
+<script src="functions.js"></script>
+<script src="index.js"></script>
+</body>
+</html>
